@@ -15,4 +15,10 @@
             android:summary="@string/island_notification_summary"
             android:fragment="org.apollo.spacestation.fragments.notification.IslandSettings" />
 
+        <com.apollo.support.preferences.SystemSettingSwitchPreference
+            android:key="less_boring_heads_up"
+            android:title="@string/less_boring_heads_up_title"
+            android:summary="@string/less_boring_heads_up_summary"
+            android:defaultValue="false" />
+
 </PreferenceScreen>
