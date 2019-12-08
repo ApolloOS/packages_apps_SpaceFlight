@@ -28,7 +28,7 @@
       android:title="@string/qs_tile_animation_category_title">
 
         <com.apollo.support.preferences.SystemSettingIntListPreference
-            android:key="anim_tile_style"
+            android:key="quick_settings_tiles_anim_style"
             android:title="@string/qs_tile_animation_style_title"
             android:entries="@array/qs_tile_animation_style_entries"
             android:entryValues="@array/qs_tile_animation_style_values"
@@ -36,7 +36,7 @@
             android:defaultValue="0" />
 
         <com.apollo.support.preferences.SystemSettingIntListPreference
-            android:key="anim_tile_duration"
+            android:key="quick_settings_tiles_anim_duration"
             android:title="@string/qs_tile_animation_duration_title"
             android:entries="@array/qs_tile_animation_duration_entries"
             android:entryValues="@array/qs_tile_animation_duration_values"
@@ -44,7 +44,7 @@
             android:defaultValue="2000" />
 
         <com.apollo.support.preferences.SystemSettingIntListPreference
-            android:key="anim_tile_interpolator"
+            android:key="quick_settings_tiles_anim_interpolator"
             android:title="@string/qs_tile_animation_interpolator_title"
             android:entries="@array/qs_tile_animation_interpolator_entries"
             android:entryValues="@array/qs_tile_animation_interpolator_values"
