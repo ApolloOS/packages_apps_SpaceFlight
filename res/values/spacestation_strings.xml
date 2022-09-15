@@ -402,4 +402,10 @@
     <string name="screen_off_udfps_title">Screen off UDFPS</string>
     <string name="screen_off_udfps_summary">Keep UDFPS enabled when the screen is off</string>
 
+    <!-- Incall vibrate options -->
+    <string name="incall_vibration_category">In-call vibration options</string>
+    <string name="incall_vibrate_connect_title">Vibrate on connect</string>
+    <string name="incall_vibrate_call_wait_title">Vibrate on call waiting</string>
+    <string name="incall_vibrate_disconnect_title">Vibrate on disconnect</string>
+
 </resources>
