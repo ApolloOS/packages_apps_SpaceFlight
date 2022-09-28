@@ -38,6 +38,7 @@ import androidx.preference.PreferenceScreen;
 import com.apollo.support.preferences.SystemSettingListPreference;
 
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
+import com.android.internal.util.apollo.udfps.UdfpsUtils;
 
 import com.apollo.support.preferences.SystemSettingSwitchPreference;
 import com.apollo.support.preferences.CustomSeekBarPreference;
@@ -89,6 +90,12 @@ public class Lockscreen extends SettingsPreferenceFragment implements
         mWeather = (Preference) findPreference(KEY_WEATHER);
         mWeatherClient = new OmniJawsClient(getContext());
         updateWeatherSettings();
+
+        mUdfpsCategory = findPreference(UDFPS_CATEGORY);
+        if (!UdfpsUtils.hasUdfpsSupport(getContext())) {
+            prefSet.removePreference(mUdfpsCategory);
+        }
+
     }
 
     @Override
