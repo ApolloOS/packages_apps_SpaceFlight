@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2014-2022 BlissRoms Project
+     Copyright (C) 2023 ApolloOS
+     SPDX-License-Identifier: Apache-2.0
+-->
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+    android:title="@string/spacestation_dashboard_title">
+
+    <!-- Animations -->
+    <Preference
+        android:key="animations_category"
+        android:title="@string/spacestation_animation_title"
+        android:fragment="org.apollo.spacestation.fragments.animations.Animations"
+        android:icon="@drawable/ic_spacestation_animations" />
+
+    <!-- Buttons -->
+    <Preference
+        android:key="buttons_category"
+        android:title="@string/spacestation_buttons_title"
+        android:fragment="org.apollo.spacestation.fragments.buttons.Buttons"
+        android:icon="@drawable/ic_spacestation_buttons" />
+
+    <!-- Gestures -->
+    <Preference
+        android:key="gestures_category"
+        android:title="@string/spacestation_gestures_title"
+        android:fragment="org.apollo.spacestation.fragments.gestures.Gestures"
+        android:icon="@drawable/ic_settings_gestures" />
+
+    <!-- Lock Screen -->
+    <Preference
+        android:key="lockscreen_category"
+        android:title="@string/spacestation_lockscreen_title"
+        android:fragment="org.apollo.spacestation.fragments.lockscreen.Lockscreen"
+        android:icon="@drawable/ic_spacestation_lockscreen" />
+
+    <!-- Notifications -->
+    <Preference
+        android:key="notifications_category"
+        android:title="@string/spacestation_notifications_title"
+        android:fragment="org.apollo.spacestation.fragments.notification.Notification"
+        android:icon="@drawable/ic_spacestation_notifications" />
+
+    <!-- Power Menu -->
+    <Preference
+        android:key="powermenu_category"
+        android:title="@string/spacestation_powermenu_title"
+        android:fragment="org.apollo.spacestation.fragments.powermenu.PowerMenu"
+        android:icon="@drawable/ic_spacestation_powermenu" />
+
+    <!-- Quick Settings panel -->
+    <Preference
+        android:key="quicksettings_category"
+        android:title="@string/spacestation_quicksettings_title"
+        android:fragment="org.apollo.spacestation.fragments.qs.QuickSettings"
+        android:icon="@drawable/ic_spacestation_quicksettings" />
+
+    <!-- Status bar -->
+    <Preference
+        android:key="statusbar_category"
+        android:title="@string/spacestation_status_bar_title"
+        android:fragment="org.apollo.spacestation.fragments.statusbar.Statusbar"
+        android:icon="@drawable/ic_spacestation_statusbar" />
+
+    <!-- Themes -->
+    <Preference
+        android:key="themes_category"
+        android:title="@string/spacestation_themes_title"
+        android:fragment="org.apollo.spacestation.fragments.themes.ThemeSettings" 
+        android:icon="@drawable/ic_spacestation_themes" />
+
+    <!-- Misc -->
+    <Preference
+        android:key="misc_category"
+        android:title="@string/spacestation_misc_title"
+        android:fragment="org.apollo.spacestation.fragments.misc.Misc"
+        android:icon="@drawable/ic_spacestation_miscellaneous" />
+
+</PreferenceScreen>

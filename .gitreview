@@ -1,5 +1,5 @@
 [gerrit]
-host=review.blissroms.com
+host=review.apolloos.com
 port=29418
-project=platform_packages_apps_Blissify.git
-defaultbranch=q
+project=packages_apps_SpaceStation.git
+defaultbranch=14

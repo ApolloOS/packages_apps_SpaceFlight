@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2014-2022 BlissRoms Project
+     SPDX-License-Identifier: Apache-2.0
+     Copyright (C) 2023 ApolloOS
+-->
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+    android:title="@string/spacestation_powermenu_title">
+
+    <PreferenceCategory
+        android:title="@string/panel_transparency_category_title">
+
+	<com.apollo.support.preferences.SystemSettingSeekBarPreference
+            android:key="transparent_power_menu"
+            android:title="@string/power_menu_transparency"
+            android:max="100"
+            android:min="0"
+            android:defaultValue="100" />
+
+        <com.apollo.support.preferences.SystemSettingSeekBarPreference
+            android:key="transparent_power_dialog_dim"
+            android:title="@string/power_menu_dialog_dim"
+            android:max="100"
+            android:min="0"
+            android:defaultValue="50" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/powermenu_items_category_title">
+
+        <com.apollo.support.preferences.SystemSettingSwitchPreference
+            android:key="powermenu_power"
+            android:title="@string/powermenu_power"
+            android:defaultValue="true" />
+
+        <com.apollo.support.preferences.SystemSettingSwitchPreference
+            android:key="powermenu_restart"
+            android:title="@string/powermenu_restart"
+            android:defaultValue="true" />
+
+        <com.apollo.support.preferences.SystemSettingSwitchPreference
+            android:key="powermenu_advanced"
+            android:title="@string/powermenu_advanced"
+            android:defaultValue="true" />
+
+        <com.apollo.support.preferences.SystemSettingSwitchPreference
+            android:key="powermenu_screenshot"
+            android:title="@string/powermenu_screenshot"
+            android:defaultValue="false" />
+
+        <com.apollo.support.preferences.SystemSettingSwitchPreference
+            android:key="powermenu_onthego"
+            android:title="@string/powermenu_onthego"
+            android:defaultValue="false" />
+
+        <SwitchPreference
+            android:key="powermenu_torch"
+            android:title="@string/powermenu_torch"
+            android:persistent="false" />
+
+        <com.apollo.support.preferences.SystemSettingSwitchPreference
+            android:key="powermenu_settings"
+            android:title="@string/powermenu_settings"
+            android:defaultValue="false" />
+
+        <com.apollo.support.preferences.SystemSettingSwitchPreference
+            android:key="powermenu_lockdown"
+            android:title="@string/powermenu_lockdown"
+            android:defaultValue="false" />
+
+        <com.apollo.support.preferences.SystemSettingSwitchPreference
+            android:key="powermenu_emergency"
+            android:title="@string/powermenu_emergency"
+            android:defaultValue="false" />
+
+        <com.apollo.support.preferences.SystemSettingSwitchPreference
+            android:key="powermenu_users"
+            android:title="@string/powermenu_users"
+            android:defaultValue="false" />
+
+        <com.apollo.support.preferences.SystemSettingSwitchPreference
+            android:key="powermenu_logout"
+            android:title="@string/powermenu_logout"
+            android:defaultValue="false" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
