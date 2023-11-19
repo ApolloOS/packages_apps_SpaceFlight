@@ -18,10 +18,10 @@
 
     <!-- Buttons -->
     <Preference
-        android:key="buttons_category"
-        android:title="@string/spacestation_buttons_title"
-        android:fragment="org.apollo.spacestation.fragments.buttons.Buttons"
-        android:icon="@drawable/ic_spacestation_buttons" />
+        android:key="button_settings"
+        android:title="@string/button_pref_title"
+        android:icon="@drawable/ic_spacestation_buttons"
+        android:fragment="com.android.settings.apollo.buttons.ButtonSettings"/>
 
     <!-- Gestures -->
     <Preference
