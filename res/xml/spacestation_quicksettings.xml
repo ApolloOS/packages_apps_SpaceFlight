@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2014-2022 BlissRoms Project
+     Copyright (C) 2014-2023 BlissRoms Project
      SPDX-License-Identifier: Apache-2.0
      Copyright (C) 2023 ApolloOS
 -->
@@ -9,10 +9,15 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/spacestation_quicksettings_title">
 
+    <PreferenceCategory
+        android:title="@string/general_category">
+
         <com.apollo.support.preferences.SecureSettingSwitchPreference
             android:key="qstile_requires_unlocking"
             android:title="@string/qstile_requires_unlocking_title"
             android:summary="@string/qstile_requires_unlocking_summary"
             android:defaultValue="true" />
+
+    </PreferenceCategory>
 
 </PreferenceScreen>
