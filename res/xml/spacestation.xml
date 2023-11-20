@@ -44,12 +44,12 @@
         android:fragment="org.apollo.spacestation.fragments.notification.Notification"
         android:icon="@drawable/ic_spacestation_notifications" />
 
-    <!-- Power Menu -->
+    <!-- Power Menu 
     <Preference
         android:key="powermenu_category"
         android:title="@string/spacestation_powermenu_title"
         android:fragment="org.apollo.spacestation.fragments.powermenu.PowerMenu"
-        android:icon="@drawable/ic_spacestation_powermenu" />
+        android:icon="@drawable/ic_spacestation_powermenu" /> -->
 
     <!-- Quick Settings panel -->
     <Preference
