@@ -443,10 +443,6 @@
     <string name="qs_tile_vertical_layout_summary">Enable vertical layout for QS tiles</string>
     <string name="qs_tile_label_size_title">Label text size</string>
 
-    <!-- QS Transparency -->
-    <string name="qs_transparency_title">QS Background transparency</string>
-    <string name="qs_transparency_summary">Set transparency level for QS background</string>
-
     <!-- Quick settings styles -->
     <string name="qs_styles_title">QS Panel Styles</string>
     <string name="qs_outline">Outline</string>
@@ -462,5 +458,9 @@
     <!-- QS Dual Tone Colors -->
     <string name="qs_dual_tone_title">Dual tone themed</string>
     <string name="qs_dual_tone_summary">Use dual tone background colors instead of AOSP single tone</string>
+
+    <!-- QS Transparency -->
+    <string name="qs_transparency_title">Background transparency</string>
+    <string name="qs_transparency_summary">Set transparency level for QS background</string>
 
 </resources>
