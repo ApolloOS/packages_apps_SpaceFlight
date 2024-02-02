@@ -277,40 +277,6 @@
     <string name="netflix_spoof_title">Netflix Spoof</string>
     <string name="netflix_spoof_summary">Spoof your device as different model for Netflix</string>
 
-    <!-- QS tile shape -->
-    <string name="qs_tile_shape">QS Tile shape</string>
-    <string name="qs_tile_round">Round</string>
-    <string name="qs_tile_rect">Rounded Rectangle</string>
-    <string name="qs_tile_mix">Round for active tiles and Rounded Rectangle for inactive tiles</string>
-
-    <!-- QS panel -->
-    <string name="qs_panel_options_title">QS tiles layout</string>
-    <string name="qs_panel_options_summary">Customize tiles layout in QS panel</string>
-    <string name="category_name_qs_tiles">QS tiles</string>
-
-    <!-- QS columns customization -->
-    <string name="qs_columns">QS columns in portrait</string>
-    <string name="qs_columns_min" translatable="false">2</string>
-    <string name="qs_columns_max" translatable="false">5</string>
-    <string name="qs_columns_landscape">QS columns in landscape</string>
-    <string name="qs_columns_landscape_min" translatable="false">@string/qs_columns_min</string>
-    <string name="qs_columns_landscape_max" translatable="false">6</string>
-    <string name="qqs_columns">QQS columns in portrait</string>
-    <string name="qqs_columns_min" translatable="false">@string/qs_columns_min</string>
-    <string name="qqs_columns_max" translatable="false">@string/qs_columns_max</string>
-    <string name="qqs_columns_landscape">QQS columns in landscape</string>
-    <string name="qqs_columns_landscape_min" translatable="false">@string/qs_columns_landscape_min</string>
-    <string name="qqs_columns_landscape_max" translatable="false">@string/qs_columns_landscape_max</string>
-
-    <!-- QS Transparency -->
-    <string name="qs_transparency_title">Background transparency</string>
-    <string name="qs_transparency_summary">Set transparency level for QS background</string>
-
-    <!-- QS style -->
-    <string name="qs_style_title">QS Panel style</string>
-    <string name="qs_style_default">Large pill</string>
-    <string name="qs_style_round">Small circle</string>
-
      <!-- Quick QS pulldown -->
      <string name="qs_quick_pulldown">Quick QS pulldown</string>
      <string name="quick_pulldown_none">Disabled</string>
