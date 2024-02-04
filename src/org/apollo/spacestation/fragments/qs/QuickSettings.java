@@ -59,6 +59,7 @@ import com.apollo.support.preferences.SystemSettingEditTextPreference;
 import com.apollo.support.preferences.SystemSettingMasterSwitchPreference;
 import com.apollo.support.preferences.SystemSettingListPreference;
 import com.apollo.support.preferences.SystemSettingSwitchPreference;
+import com.apollo.support.preferences.SystemSettingSeekBarPreference;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -75,6 +76,8 @@ public class QuickSettings extends SettingsPreferenceFragment implements
     private static final String KEY_QS_ROW_PORTRAIT = "qs_layout_rows";
     private static final String KEY_QQS_ROW_PORTRAIT = "qqs_layout_rows";
     private static final String KEY_APPLY_CHANGE_BUTTON = "apply_change_button";
+    private static final String KEY_QS_LABEL_SIZE = "qs_tile_label_size";
+    private static final String KEY_QS_SECONDARY_LABEL_SIZE = "qs_tile_secondary_label_size";
 
     private Context mContext;
 
@@ -96,6 +99,8 @@ public class QuickSettings extends SettingsPreferenceFragment implements
     private SystemSettingListPreference mQsUI;
     private Handler mHandler;
     private ThemeUtils mThemeUtils;
+    private SystemSettingSeekBarPreference mSize;
+    private SystemSettingSeekBarPreference mSizeSec;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -167,6 +172,12 @@ public class QuickSettings extends SettingsPreferenceFragment implements
 
         mVertical = (SystemSettingSwitchPreference) findPreference(KEY_QS_VERTICAL_LAYOUT);
         mVertical.setEnabled(!hideLabel);
+
+        mSize = (SystemSettingSeekBarPreference) findPreference(KEY_QS_LABEL_SIZE);
+        mSize.setEnabled(!hideLabel);
+
+        mSizeSec = (SystemSettingSeekBarPreference) findPreference(KEY_QS_SECONDARY_LABEL_SIZE);
+        mSizeSec.setEnabled(!hideLabel);
     }
 
     @Override
@@ -185,6 +196,8 @@ public class QuickSettings extends SettingsPreferenceFragment implements
         if (preference == mHide) {
             boolean hideLabel = (Boolean) newValue;
             mVertical.setEnabled(!hideLabel);
+            mSize.setEnabled(!hideLabel);
+            mSizeSec.setEnabled(!hideLabel);
         } else if (preference == mQsColumns) {
             int qs_columns = Integer.parseInt(newValue.toString());
             mApplyChange.setEnabled(
