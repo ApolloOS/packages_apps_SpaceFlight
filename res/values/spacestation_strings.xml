@@ -424,6 +424,9 @@
     <string name="screen_off_udfps_title">Screen off UDFPS</string>
     <string name="screen_off_udfps_summary">Keep UDFPS enabled when the screen is off</string>
 
+    <!-- QS Tiles Layout -->
+    <string name="qs_layout_title">QS Layout Customizations</string>
+
     <!-- QS tiles layout -->
     <string name="qs_layout_category_title">QuickSettings</string>
     <string name="qs_tile_layout_title">QS tiles layout</string>

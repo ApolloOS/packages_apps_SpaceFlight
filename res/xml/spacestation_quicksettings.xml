@@ -60,6 +60,9 @@
 
     </PreferenceCategory>
 
+    <PreferenceCategory
+        android:title="@string/qs_layout_title">
+
         <com.apollo.support.preferences.CustomSeekBarPreference
             android:key="qs_layout_columns"
             android:title="@string/qs_columns_portrait_title"
@@ -102,5 +105,7 @@
         <com.android.settingslib.widget.LayoutPreference
             android:key="apply_change_button"
             android:layout="@layout/qs_tile_apply_change_button" />
+
+    </PreferenceCategory>
 
 </PreferenceScreen>
