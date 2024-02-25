@@ -16,7 +16,6 @@
 
 package org.apollo.spacestation.fragments.qs;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -29,9 +28,7 @@ import android.os.UserHandle;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.res.Resources;
-import android.database.ContentObserver;
 import android.graphics.Color;
-import android.net.Uri;
 import android.provider.Settings;
 import android.text.TextUtils;
 import android.view.View;
@@ -53,7 +50,6 @@ import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.search.SearchIndexable;
 
 import com.android.settingslib.widget.LayoutPreference;
-import com.android.internal.util.apollo.ThemeUtils;
 import com.apollo.support.preferences.CustomSeekBarPreference;
 import com.apollo.support.preferences.SystemSettingEditTextPreference;
 import com.apollo.support.preferences.SystemSettingMasterSwitchPreference;
@@ -92,13 +88,6 @@ public class QuickSettings extends SettingsPreferenceFragment implements
 
     private int[] currentValue = new int[2];
 
-    private static final String KEY_QS_UI_STYLE  = "qs_ui_style";
-
-    private static final String overlayThemeTarget  = "com.android.systemui";
-
-    private SystemSettingListPreference mQsUI;
-    private Handler mHandler;
-    private ThemeUtils mThemeUtils;
     private SystemSettingSeekBarPreference mSize;
     private SystemSettingSeekBarPreference mSizeSec;
 
@@ -113,9 +102,6 @@ public class QuickSettings extends SettingsPreferenceFragment implements
         mQuickPulldown.setValue(String.valueOf(qpmode));
         mQuickPulldown.setSummary(mQuickPulldown.getEntry());
         mQuickPulldown.setOnPreferenceChangeListener(this);
-
-        mQsUI = (SystemSettingListPreference) findPreference(KEY_QS_UI_STYLE);
-
     }
 
     @Override
@@ -220,57 +206,8 @@ public class QuickSettings extends SettingsPreferenceFragment implements
                 currentValue[0] != mQsRows.getValue() * 10 + mQsColumns.getValue() ||
                 currentValue[1] != qqs_rows * 10 + mQsColumns.getValue()
             );
-        } else if (preference == mQsUI) {
-            mCustomSettingsObserver.observe();
         }
         return true;
-    }
-
-    private CustomSettingsObserver mCustomSettingsObserver = new CustomSettingsObserver(mHandler);
-    private class CustomSettingsObserver extends ContentObserver {
-
-        CustomSettingsObserver(Handler handler) {
-            super(handler);
-        }
-
-        void observe() {
-            Context mContext = getContext();
-            ContentResolver resolver = mContext.getContentResolver();
-            resolver.registerContentObserver(Settings.System.getUriFor(
-                    Settings.System.QS_UI_STYLE),
-                    false, this, UserHandle.USER_ALL);
-        }
-
-        @Override
-        public void onChange(boolean selfChange, Uri uri) {
-            if (uri.equals(Settings.System.getUriFor(Settings.System.QS_UI_STYLE))) {
-                updateQsStyle();
-            }
-        }
-    }
-
-    private void updateQsStyle() {
-        ContentResolver resolver = getActivity().getContentResolver();
-
-        boolean isA11Style = Settings.System.getIntForUser(getContext().getContentResolver(),
-                Settings.System.QS_UI_STYLE , 1, UserHandle.USER_CURRENT) == 1;
-
-	String qsUIStyleCategory = "android.theme.customization.qs_ui";
-
-	/// reset all overlays before applying
-	resetQsOverlays(qsUIStyleCategory);
-
-	if (isA11Style) {
-	    setQsStyle("com.android.system.qs.ui.A11", qsUIStyleCategory);
-	}
-    }
-
-    public void resetQsOverlays(String category) {
-        mThemeUtils.setOverlayEnabled(category, overlayThemeTarget, overlayThemeTarget);
-    }
-
-    public void setQsStyle(String overlayName, String category) {
-        mThemeUtils.setOverlayEnabled(category, overlayName, overlayThemeTarget);
     }
 
     @Override
